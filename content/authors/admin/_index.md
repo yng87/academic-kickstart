@@ -22,8 +22,8 @@ bio: blank
 
 interests:
 #- anything
-- Dark matter
-- Neutron star
+- Dark matter and the structure formation of the universe
+- Thermal evolution of neutron stars and its application to new physics search
 
 education:
   courses:
@@ -42,9 +42,9 @@ social:
 #- icon: envelope
 #  icon_pack: fas
 #  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-#- icon: twitter
-#  icon_pack: fab
-#  link: https://twitter.com/GeorgeCushen
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/yana_phys
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -67,5 +67,6 @@ email: "k.yanagi07@gmail.com"
 #- Visitors
 ---
 
-I am interested in particle physics phenomenology, in particular astrophysical probe of physics beyond the standard model.
-My recent works include FIMP dark matter, self-interacting dark matter, and new particle search using neutron stars.
+I am a PhD student of particle physics.
+My interest is phenomenology, in particular astrophysical probe of physics beyond the standard model.
+
