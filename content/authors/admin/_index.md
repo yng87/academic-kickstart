@@ -18,7 +18,7 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 #bio: My research interests include particle phenomenology and astroparticle physics.
-bio: blank
+bio: 
 
 interests:
 #- anything
@@ -67,6 +67,6 @@ email: "k.yanagi07@gmail.com"
 #- Visitors
 ---
 
-I am a PhD student of particle physics.
+I am a PhD student in particle physics.
 My interest is phenomenology, in particular astrophysical probe of physics beyond the standard model.
 

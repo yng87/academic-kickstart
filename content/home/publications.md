@@ -7,8 +7,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Recent Publications"
-subtitle = "You can find my articles on [Inspire](http://inspirehep.net/search?ln=ja&p=author%3A%22keisuke+yanagi+%22&of=hb&action_search=%E6%A4%9C%E7%B4%A2&sf=earliestdate&so=d)"
+title = "Recent Papers"
+subtitle = "You can find my papers on [Inspire](http://inspirehep.net/search?ln=ja&p=author%3A%22keisuke+yanagi+%22&of=hb&action_search=%E6%A4%9C%E7%B4%A2&sf=earliestdate&so=d)"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
