@@ -1,5 +1,6 @@
 ---
 title: "KEK-PH 2017"
+summary: Muon g-2, Dark Matter and MSSM
 date: 2017-02-16
 all_day: true
 event: "KEK-PH 2017"

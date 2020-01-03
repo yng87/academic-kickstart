@@ -15,7 +15,7 @@ subtitle = "You can find my papers on [Inspire](http://inspirehep.net/search?ln=
   page_type = "publication"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 5
+  count = 4
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -36,7 +36,7 @@ subtitle = "You can find my papers on [Inspire](http://inspirehep.net/search?ln=
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 2
+  view = 3
   
 [design.background]
   # Apply a background color, gradient, or image.
