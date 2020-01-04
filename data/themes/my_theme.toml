@@ -1,0 +1,24 @@
+# Theme metadata
+name = "my_theme"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+#primary = "#007FFF"
+#primary = "#1abc9c"
+primary = "#22a6b3"
+
+# Menu
+#menu_primary = "#007FFF" # 500
+#menu_primary = "#16a085"
+menu_primary = "#22a6b3"
+menu_text = "#fff"
+#menu_text_active = "#0099ff" # A100
+#menu_text_active = "#1abc9c"
+menu_text_active = "#7ed6df"
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"
