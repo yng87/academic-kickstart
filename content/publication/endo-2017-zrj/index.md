@@ -1,7 +1,7 @@
 ---
 title: "Probing minimal SUSY scenarios in the light of muon $g-2$ and dark matter"
 date: 2017-04-01
-publishDate: 2020-01-03T06:34:38.853967Z
+publishDate: 2020-03-02T11:59:34.528481Z
 authors: ["Motoi Endo", "Koichi Hamaguchi", "Sho Iwamoto", "Keisuke Yanagi"]
 publication_types: ["2"]
 abstract: ""

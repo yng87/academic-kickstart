@@ -1,7 +1,7 @@
 ---
 title: "Probing the origin of 750 GeV diphoton excess with the precision measurements at the ILC"
 date: 2016-04-01
-publishDate: 2020-01-03T06:34:38.854422Z
+publishDate: 2020-03-02T11:59:34.528918Z
 authors: ["Kyu Jung Bae", "Koichi Hamaguchi", "Takeo Moroi", "Keisuke Yanagi"]
 publication_types: ["2"]
 abstract: ""

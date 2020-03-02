@@ -1,7 +1,7 @@
 ---
 title: "Self-interacting dark matter and muon $g-2$ in a gauged U$(1)_{L_{\\mu} - L_{\\tau}}$ model"
 date: 2018-05-01
-publishDate: 2020-01-03T06:34:38.852251Z
+publishDate: 2020-03-02T11:59:34.526553Z
 authors: ["Ayuki Kamada", "Kunio Kaneta", "Keisuke Yanagi", "Hai-Bo Yu"]
 publication_types: ["2"]
 abstract: ""
