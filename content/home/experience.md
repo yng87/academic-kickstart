@@ -33,11 +33,20 @@ date_format = "Jan 2006"
 #  """
 
 [[experience]]
+  title = "Engineer"
+  company = "ZOZO Technologies"
+  company_url = ""
+  location = "Tokyo"
+  date_start = "2020-04-01"
+  description = "Machine learning"
+
+[[experience]]
   title = "PhD student"
   company = "University of Tokyo"
   company_url = ""
   location = "Tokyo"
   date_start = "2017-04-01"
+  date_end = "2020-03-31"
   description = """Physics"""
   
  [[experience]]

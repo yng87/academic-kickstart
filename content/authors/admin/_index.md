@@ -9,11 +9,11 @@ authors:
 superuser: true
 
 # Role/position
-role: PhD student
+role: PhD
 
 # Organizations/Affiliations
 organizations:
-- name: University of Tokyo
+- name: ZOZO Technologies
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,14 +22,15 @@ bio:
 
 interests:
 #- anything
-- Dark matter and the structure formation of the universe
-- Thermal evolution of neutron stars and its application to new physics search
+- Machine learning
+- Particle physics
+- Neutron star physics
 
 education:
   courses:
   - course: PhD in physics
     institution: University of Tokyo
-    year: 2017-
+    year: 2017-2020
   - course: Master in physics
     institution: University of Tokyo
     year: 2015-2017
@@ -67,6 +68,10 @@ email: "k.yanagi07@gmail.com"
 #- Visitors
 ---
 
-I am a PhD student in particle physics.
-My interest is phenomenology, in particular astrophysical probe of physics beyond the standard model.
+My research area during the graduate course was particle physics phenomenology, in particular astrophysical probe of physics beyond the standard model.
+I experienced various mathematical modeling, numerical calculation and national/international collaboration.
+
+Currently I am interested in machine learning application to the computer vision and natural language processing.
+
+I like Julia, Python and C++.
 

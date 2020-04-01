@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Recent Papers"
-subtitle = "You can find my papers on [Inspire](http://inspirehep.net/search?ln=ja&p=author%3A%22keisuke+yanagi+%22&of=hb&action_search=%E6%A4%9C%E7%B4%A2&sf=earliestdate&so=d)"
+subtitle = "You can find my physics papers on [Inspire](https://inspirehep.net/authors/1284683)"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
