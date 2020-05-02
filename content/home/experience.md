@@ -33,7 +33,7 @@ date_format = "Jan 2006"
 #  """
 
 [[experience]]
-  title = "Engineer"
+  title = "Machine Learning Engineer"
   company = "ZOZO Technologies"
   company_url = ""
   location = "Tokyo"
