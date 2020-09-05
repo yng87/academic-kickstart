@@ -2,6 +2,7 @@
 title: "Hugo Academic + Netlify でホームページを作成した"
 date: 2020-01-03
 lang: en-us
+tags: ["hugo", "tips"]
 ---
 
 ### Hugo とは
