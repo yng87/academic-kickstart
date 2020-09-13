@@ -8,4 +8,5 @@ google_fonts = "Cutive+Mono|Lora:400,700|Roboto:400,700|Source+Sans+Pro"
 heading_font = "Lora"
 body_font = "Source Sans Pro"
 nav_font = "Lora"
-mono_font = "Cutive Mono"
+#mono_font = "Cutive Mono" 
+mono_font = "Roboto Mono" # code にはこっちの方が見やすい
