@@ -12,7 +12,7 @@
 theme = "my_theme"
 
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -54,8 +54,8 @@ description = ""
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-highlight_languages = ["r","bash","python"]  # Add support for highlighting additional languages
-highlight_style = "vs2015"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+highlight_languages = ["bash", "Python"]  # Add support for highlighting additional languages
+highlight_style = "nord"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable LaTeX math rendering? true/false
 #   If false, you can enable math on a per page basis as needed.
