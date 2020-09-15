@@ -1,18 +1,19 @@
 ---
 title: "CatBoost の feature importance"
-date: 2020-09-1
+date: 2020-09-15
 lang: en-us
 draft: true
 tags: ["machine learning"]
 ---
 
-## 概要
-
+# 概要
+---
 CatBoost が計算してくれる feature importance の定義がドキュメントを見てもよくわからなかったので調べた。
 
-いくつか importance の定義があるが、ここでは `PredictionValuesChange` についてまとめる。これはその feature が最終的な予測値にどれだけ影響を持つかという指標である。
+いくつか importance の定義があるが、ここでは `PredictionValuesChange` で定義されるものについてまとめる。これはその feature が最終的な予測値にどれだけ影響を持つかという指標である。
 
-## 実際に CatBoost で importance を出してみる
+# CatBoost で importance を出してみる
+---
 
 まずはシンプルなモデルを作って実際に feature importance を出力してみる。ここでは iris dataset を使い以下のようなパラメーターでモデルを訓練する。
 
@@ -59,7 +60,9 @@ array([ 0.        ,  0.        , 44.49955092, 55.50044908])
 となる。木の分岐に特徴量0と1が使われていないので、それらに関してはゼロになっている。これをみると特徴量3が特徴量2に比べて少しだけ重要であるらしい。
 この定義による importance は負にならないので、合計100になるよう normalize された値が出力されている。
 
-## CatBoost は何を計算しているか？
+# CatBoost は何を計算しているか？
+
+---
 
 [公式ドキュメント](https://catboost.ai/docs/concepts/fstr.html#fstr__regular-feature-importance)によると、feature F の feature importance は leaf の ペアに関してそれぞれの予測値とその加重平均を比較して計算されている
 
@@ -75,13 +78,15 @@ $$avr = \frac{c_1v_1 + c_2 v_2}{c_1 + c_2}.$$
 
 比較に使う leaf pair はどのように選べば良いのだろうか？まず leaf 直上の分岐に使われる特徴量に関してはわかりやすい。同じ parent を持つ leaf 二つを使って $c_i$ と $v_i$ を計算すれば良い。
 
-では木のもっと上の方に現れる特徴量についてはどうすれば良いだろうか？一般の木ではペアを定義することはできないが、CatBoostは oblivious tree を生成するということを考えると実はうまく定義できる。木の各深さで分岐の条件が同一ということは、結局CatBoostは単に分岐条件を直列に並べて Yes/No の判定を繰り返しているに過ぎない。なので、d 番目の分岐が異なり、その前後の分岐は全て同じような leaf node のペアを必ず作ることができる。そのようなペアを集めてきて上の (1) 式で深さ d 番目のfeature のimportance を計算することができるのである。
+では木のもっと上の方に現れる特徴量についてはどうすれば良いだろうか？一般の木では leaf 間のペアを定義することはできなさそうだが、CatBoost が生成する oblivious tree に限ってはうまく定義できる。
+というのも、木の各深さで分岐の条件が同一ということは、結局CatBoostは単に分岐条件を一列に並べて Yes/No の判定を繰り返しているに過ぎない。なので、d 番目の分岐が異なり、その前後の分岐は全て同じような leaf node のペアを必ず作ることができる。そのようなペアを集めてきて上の (1) 式で深さ d 番目のfeature のimportance を計算することができそうだ。
 
-以上のことはドキュメントからだとわかりづらいが、[ソースコードの該当箇所](https://github.com/catboost/catboost/blob/49e24bba3279ae1ac22146b8322e37d86e6049bf/catboost/libs/fstr/feature_str.h#L218-L256)を見ると理解できる。[^1]
+以上のことはドキュメントからだとわかりづらいが、[ソースコードの該当箇所](https://github.com/catboost/catboost/blob/49e24bba3279ae1ac22146b8322e37d86e6049bf/catboost/libs/fstr/feature_str.h#L218-L256)を見ると多分そうだろうと想像できる。[^1]
 
-## 実際に計算して確かめてみる
+# 実際に計算して確かめてみる
+---
 
-今の説明を実際に iris の例で確かめてみよう。[^2] leaf node を左から leaf0, leaf1, ..., leaf3 と呼ぶことにする。まず leaf 直上の分岐に使われている feature 3 については、(leaf0, leaf1) と (leaf2, leaf3) に関してそれぞれ (1) 式を計算する
+今の説明を実際に先ほど計算した iris の例で確かめてみる。[^2] leaf node を左から leaf0, leaf1, ..., leaf3 と呼ぶことにする。まず leaf 直上の分岐に使われている feature 3 については、(leaf0, leaf1) と (leaf2, leaf3) に関してそれぞれ (1) 式を計算する
 
 ```python
 # get border values for each feature
@@ -133,7 +138,7 @@ ftr_imp
 array([ 0.        ,  0.        ,  0.        , 70.48167229])
 ```
 
-次に、root node で使われている feature 2 について計算する。feature 2 の分岐については判定が異なり、その下の feature 3 については同じ判定をしているノードをペアにすると (leaf0, leaf2), (leaf1, leaf3) となるので、
+次に、root node で使われている feature 2 について計算する。ここでペアを組むのは (leaf0, leaf2), (leaf1, leaf3) である。例えば、leaf0 と leaf2 は、faeture 3 に関する分岐は両方 No だが、root での feature 2 に関する分岐は異なる。
 
 ```python
 feature_idx = 2
@@ -169,7 +174,9 @@ array([ 0.        ,  0.        , 44.49955092, 55.50044908])
 
 となる。これはCatBoost の APIを使って求めた結果に一致している。より複雑な木になった時も同様に計算できるはずである。
 
-## Non-oblivious tree の場合
+# Non-oblivious tree の場合
+---
+
 一般の対称ではない木の場合は上記の方法は使えない。CatBoost は oblivious の制限を付けずに学習することもできるが、その際の importance は
 
 1. leaf node の parent に対して (1) 式で feature F の importance を計算
