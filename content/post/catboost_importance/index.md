@@ -2,7 +2,7 @@
 title: "CatBoost の feature importance"
 date: 2020-09-15
 lang: en-us
-draft: true
+draft: false
 tags: ["machine learning"]
 ---
 
