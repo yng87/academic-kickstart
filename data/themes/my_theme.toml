@@ -5,22 +5,14 @@ name = "my_theme"
 light = true
 
 # Primary
-#primary = "#007FFF"
-#primary = "#1abc9c"
-#primary = "#22a6b3"
-#primary = "#1d2d50"
-primary = "#133b5c"
+primary = "#1f4079"
+
 
 # Menu
-#menu_primary = "#007FFF" # 500
-#menu_primary = "#16a085"
-#menu_primary = "#22a6b3"
-menu_primary = "#133b5c"
-menu_text = "#fff"
-#menu_text_active = "#0099ff" # A100
-#menu_text_active = "#1abc9c"
-menu_text_active = "#1e5f74"
-menu_title = "#fff"
+menu_primary = "#1f4079"
+menu_text = "#d9d7cc"
+menu_text_active = "#82a5b3"
+menu_title = "#d9d7cc"
 
 # Home sections
 home_section_odd = "rgb(255, 255, 255)"
